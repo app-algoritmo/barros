@@ -44,14 +44,14 @@
   --f-sans:    "Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --f-mono:    "Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  --t-xs:   0.75rem;
-  --t-sm:   0.8125rem;
-  --t-base: 0.9375rem;
-  --t-md:   1.0625rem;
-  --t-lg:   1.375rem;
-  --t-xl:   1.875rem;
-  --t-2xl:  2.5rem;
-  --t-3xl:  3.25rem;
+  --t-xs:   0.8125rem;
+  --t-sm:   0.9375rem;
+  --t-base: 1.0625rem;
+  --t-md:   1.1875rem;
+  --t-lg:   1.5rem;
+  --t-xl:   2rem;
+  --t-2xl:  2.625rem;
+  --t-3xl:  3.375rem;
 
   /* Métrica */
   --wrap: 1160px;
@@ -89,8 +89,8 @@ body{
 
 /* ─── Tipografia ──────────────────────────────────────────── */
 h1,h2,h3{font-family:var(--f-display);font-weight:400;letter-spacing:-0.02em;line-height:1.14;color:var(--ink)}
-h1{font-size:clamp(2.1rem,5.2vw,var(--t-3xl))}
-h2{font-size:clamp(1.6rem,3.6vw,var(--t-2xl))}
+h1{font-size:clamp(2.35rem,5.4vw,var(--t-3xl))}
+h2{font-size:clamp(1.75rem,3.8vw,var(--t-2xl))}
 h3{font-size:var(--t-lg);line-height:1.28}
 h4{font-family:var(--f-sans);font-size:var(--t-base);font-weight:600;letter-spacing:0}
 p{max-width:68ch}
