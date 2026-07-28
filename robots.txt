@@ -1,0 +1,7 @@
+# barros.no — DOC-WEB-CFG-001 · v1.0.0
+User-agent: *
+Allow: /
+Disallow: /src/
+Disallow: /tools/
+
+Sitemap: https://barros.no/sitemap.xml

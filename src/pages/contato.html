@@ -1,0 +1,156 @@
+<!--meta
+{
+  "slug": "contato.html",
+  "doc": "DOC-WEB-PG-005",
+  "title": "Contato e propostas — Barros",
+  "desc": "Descreva a necessidade e selecione o serviço ou produto. Resposta em até dois dias úteis. post@barros.no · Larvik, Noruega.",
+  "scripts": ["/assets/js/form.js"],
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "url": "https://barros.no/contato.html",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Barros",
+      "email": "post@barros.no",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "post@barros.no",
+        "contactType": "sales",
+        "availableLanguage": ["pt-BR", "en", "nb-NO", "es"]
+      }
+    }
+  }
+}
+-->
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="cont.eyebrow">Contato</span>
+    <h1 data-i18n="cont.titulo">Conte o problema.</h1>
+    <p class="lead" data-i18n="cont.lead">Quanto mais concreto o contexto, mais útil a resposta. Selecione o serviço ou produto de interesse e descreva a situação — respondemos com escopo, formato e prazo em até dois dias úteis.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid" style="grid-template-columns:minmax(0,1.7fr) minmax(260px,1fr);gap:var(--sp-5)">
+
+      <div>
+        <form class="form" id="form-contato" novalidate>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="nome" data-i18n="form.nome">Nome <span class="req">*</span></label>
+              <input type="text" id="nome" name="nome" autocomplete="name" required>
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="empresa" data-i18n="form.empresa">Empresa</label>
+              <input type="text" id="empresa" name="empresa" autocomplete="organization">
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="email" data-i18n="form.email">E-mail <span class="req">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="telefone" data-i18n="form.telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="+47 000 00 000">
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="pais" data-i18n="form.pais">País da operação</label>
+              <select id="pais" name="pais">
+                <option value="">—</option>
+                <option>Noruega</option>
+                <option>Brasil</option>
+                <option>Espanha</option>
+                <option>Suécia</option>
+                <option>Dinamarca</option>
+                <option>Portugal</option>
+                <option data-i18n="form.pais.outro">Outro</option>
+              </select>
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="prazo" data-i18n="form.prazo">Prazo pretendido</label>
+              <select id="prazo" name="prazo">
+                <option value="">—</option>
+                <option data-i18n="form.prazo.1">Imediato</option>
+                <option data-i18n="form.prazo.2">Até 3 meses</option>
+                <option data-i18n="form.prazo.3">Até 6 meses</option>
+                <option data-i18n="form.prazo.4">Ainda avaliando</option>
+              </select>
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="servico" data-i18n="form.servico">Serviço ou produto</label>
+            <select id="servico" name="servico">
+              <option value="" data-i18n="form.servico.vazio">Selecione — a lista segue o disco de serviços</option>
+            </select>
+            <span class="hint" data-i18n="form.servico.hint">Se não souber onde encaixa, deixe em branco e descreva abaixo.</span>
+            <span class="field-error"></span>
+          </div>
+
+          <div class="field">
+            <label for="mensagem" data-i18n="form.mensagem">Situação e necessidade <span class="req">*</span></label>
+            <textarea id="mensagem" name="mensagem" required
+              data-i18n-attr="placeholder:form.mensagem.ph"
+              placeholder="O que precisa ser resolvido, o que já foi tentado e o que decide o sucesso do trabalho."></textarea>
+            <span class="field-error"></span>
+          </div>
+
+          <div class="field" style="position:absolute;left:-9999px" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="field">
+            <div class="check">
+              <input type="checkbox" id="consentimento" name="consentimento" required>
+              <label for="consentimento" data-i18n="form.lgpd">Autorizo o tratamento dos dados acima para responder a esta solicitação, conforme a Política de Privacidade. Os dados não são compartilhados com terceiros para fins comerciais.</label>
+            </div>
+            <span class="field-error"></span>
+          </div>
+
+          <div class="form-status" id="form-status" hidden></div>
+
+          <div class="btn-row">
+            <button class="btn" type="submit" data-i18n="form.enviar">Enviar mensagem</button>
+            <a class="btn btn--quiet" href="mailto:post@barros.no">post@barros.no</a>
+          </div>
+
+        </form>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3 data-i18n="cont.card.titulo">Endereço e canais</h3>
+          <dl class="facts" style="margin-top:var(--sp-3)">
+            <div><dt data-i18n="cont.c1">E-mail</dt><dd><a href="mailto:post@barros.no">post@barros.no</a></dd></div>
+            <div><dt data-i18n="cont.c2">Base</dt><dd>Larvik, Vestfold — Noruega</dd></div>
+            <div><dt data-i18n="cont.c3">Idiomas</dt><dd>Português · English · Norsk · Español</dd></div>
+            <div><dt data-i18n="cont.c4">Resposta</dt><dd data-i18n="cont.c4.v">Até 2 dias úteis</dd></div>
+          </dl>
+        </div>
+
+        <div class="card" style="margin-top:var(--sp-3)">
+          <h3 data-i18n="cont.rec.titulo">Reclamações</h3>
+          <p data-i18n="cont.rec.corpo">Reclamações sobre trabalhos em andamento ou concluídos entram pelo mesmo formulário, com a palavra «reclamação» no início da mensagem. São registradas, tratadas com prazo e respondidas por escrito.</p>
+          <p style="margin-top:var(--sp-2)"><a href="/qualidade.html" data-i18n="cont.rec.link">Ver o procedimento completo</a></p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>

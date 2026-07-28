@@ -1,0 +1,135 @@
+/* ============================================================
+   BARROS — layout.css
+   Cabeçalho, rodapé, seções e malha.
+   Documento controlado: DOC-WEB-CSS-002 · v1.0.0
+   ============================================================ */
+
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.wrap-narrow{width:100%;max-width:var(--wrap-narrow);margin-inline:auto;padding-inline:var(--gutter)}
+
+.section{padding-block:var(--sp-6)}
+.section--tight{padding-block:var(--sp-5)}
+.section--surface{background:var(--surface);border-block:1px solid var(--line)}
+.section-head{margin-bottom:var(--sp-5);max-width:62ch}
+.section-head p{margin-top:var(--sp-2)}
+
+.rule{height:1px;background:var(--line);border:0;margin-block:var(--sp-5)}
+
+/* ─── Cabeçalho ───────────────────────────────────────────── */
+.site-header{
+  position:sticky;top:0;z-index:900;
+  background:rgba(246,247,247,.86);
+  backdrop-filter:saturate(180%) blur(12px);
+  -webkit-backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;gap:var(--sp-4);
+  height:66px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand img,.brand svg{width:30px;height:30px;display:block}
+.brand-name{
+  font-family:var(--f-display);font-size:1.06rem;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;line-height:1;
+}
+.brand-name span{display:block;font-family:var(--f-mono);font-size:9px;font-weight:400;
+  letter-spacing:.2em;color:var(--ink-3);margin-top:3px;text-transform:uppercase}
+
+.nav{margin-left:auto;display:flex;align-items:center;gap:var(--sp-3)}
+.nav-list{display:flex;align-items:center;gap:var(--sp-3);list-style:none;margin:0;padding:0}
+.nav-list a{
+  font-size:var(--t-sm);font-weight:500;color:var(--ink-2);
+  padding:6px 2px;position:relative;transition:color .18s var(--ease);
+}
+.nav-list a:hover{color:var(--ink)}
+.nav-list a[aria-current="page"]{color:var(--ink)}
+.nav-list a[aria-current="page"]::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--ink);
+}
+
+.lang-switch{display:flex;align-items:center;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.lang-switch button{
+  background:none;border:0;cursor:pointer;
+  font-family:var(--f-mono);font-size:10px;font-weight:500;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);padding:6px 9px;
+  border-right:1px solid var(--line);transition:color .16s,background .16s;
+}
+.lang-switch button:last-child{border-right:0}
+.lang-switch button:hover{color:var(--ink);background:var(--surface-2)}
+.lang-switch button[aria-pressed="true"]{color:var(--surface);background:var(--ink)}
+
+.nav-toggle{
+  display:none;background:none;border:1px solid var(--line);border-radius:var(--radius);
+  width:38px;height:34px;cursor:pointer;align-items:center;justify-content:center;
+}
+.nav-toggle span{display:block;width:16px;height:1px;background:var(--ink);position:relative}
+.nav-toggle span::before,.nav-toggle span::after{
+  content:"";position:absolute;left:0;width:16px;height:1px;background:var(--ink);
+}
+.nav-toggle span::before{top:-5px}
+.nav-toggle span::after{top:5px}
+
+@media (max-width:920px){
+  .nav-toggle{display:flex}
+  .nav{
+    position:fixed;inset:66px 0 auto 0;background:var(--surface);
+    border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;
+    gap:0;padding:var(--sp-3) var(--gutter) var(--sp-4);
+    transform:translateY(-8px);opacity:0;pointer-events:none;
+    transition:opacity .2s var(--ease),transform .2s var(--ease);
+  }
+  .nav[data-open="true"]{opacity:1;transform:none;pointer-events:auto}
+  .nav-list{flex-direction:column;align-items:stretch;gap:0}
+  .nav-list a{display:block;padding:12px 0;border-bottom:1px solid var(--line-soft);font-size:var(--t-md)}
+  .lang-switch{margin-top:var(--sp-3);align-self:flex-start}
+  .header-inner .lang-switch--desktop{display:none}
+}
+@media (min-width:921px){ .nav .lang-switch--mobile{display:none} }
+
+/* ─── Rodapé (4 colunas) ──────────────────────────────────── */
+.site-footer{background:var(--surface);border-top:1px solid var(--line);margin-top:var(--sp-6)}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:var(--sp-5) var(--sp-4);
+  padding-block:var(--sp-6) var(--sp-5);
+}
+.footer-col h3{
+  font-family:var(--f-mono);font-size:var(--t-xs);font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);
+  margin-bottom:var(--sp-3);
+}
+.footer-col ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.footer-col a{font-size:var(--t-sm);color:var(--ink-2);transition:color .16s var(--ease)}
+.footer-col a:hover{color:var(--ink)}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:var(--sp-3)}
+.footer-brand img,.footer-brand svg{width:32px;height:32px}
+.footer-desc{font-size:var(--t-sm);color:var(--ink-2);max-width:34ch;line-height:1.7}
+.footer-addr{
+  font-family:var(--f-mono);font-size:var(--t-xs);color:var(--ink-3);
+  margin-top:var(--sp-3);line-height:1.9;font-style:normal;
+}
+.footer-bottom{
+  border-top:1px solid var(--line);
+  padding-block:var(--sp-3) var(--sp-4);
+  display:flex;flex-wrap:wrap;gap:var(--sp-2) var(--sp-4);
+  align-items:baseline;justify-content:space-between;
+  font-size:var(--t-xs);color:var(--ink-3);
+}
+.footer-bottom .mono{color:var(--ink-3)}
+
+@media (max-width:860px){ .footer-grid{grid-template-columns:1fr 1fr} }
+@media (max-width:520px){ .footer-grid{grid-template-columns:1fr;gap:var(--sp-4)} }
+
+/* ─── Controle de documento (ISO 9001 · 7.5) ──────────────── */
+.doc-control{
+  border-top:1px solid var(--line);
+  padding-top:var(--sp-3);margin-top:var(--sp-5);
+  display:flex;flex-wrap:wrap;gap:4px var(--sp-4);
+  font-family:var(--f-mono);font-size:10px;letter-spacing:.06em;
+  color:var(--ink-3);text-transform:uppercase;
+}
+.doc-control dl{display:flex;gap:6px;margin:0}
+.doc-control dt::after{content:":"}
+.doc-control dd{margin:0;color:var(--ink-2)}

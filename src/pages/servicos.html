@@ -1,0 +1,95 @@
+<!--meta
+{
+  "slug": "servicos.html",
+  "doc": "DOC-WEB-PG-002",
+  "title": "Serviços e produtos — Barros",
+  "desc": "Catálogo completo: operações e governança, supply chain, desenvolvimento de software, painéis de dados, assuntos regulatórios, certificação ISO e GMP, formação executiva.",
+  "scripts": ["/assets/js/disco.js"],
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Serviços e produtos Barros",
+    "itemListElement": [
+      { "@type": "Service", "position": 1, "name": "Governança e gestão executiva", "provider": { "@type": "Organization", "name": "Barros Consultoria" } },
+      { "@type": "Service", "position": 2, "name": "Supply chain e aduana", "provider": { "@type": "Organization", "name": "Barros Consultoria" } },
+      { "@type": "Service", "position": 3, "name": "Desenvolvimento de software e dados", "provider": { "@type": "Organization", "name": "Digital Solutions" } },
+      { "@type": "Service", "position": 4, "name": "Assuntos regulatórios", "provider": { "@type": "Organization", "name": "Inteligência Sanitária" } },
+      { "@type": "Service", "position": 5, "name": "Certificação ISO e GMP", "provider": { "@type": "Organization", "name": "Inteligência Sanitária" } }
+    ]
+  }
+}
+-->
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="serv.eyebrow">Portfólio · 15 frentes</span>
+    <h1 data-i18n="serv.titulo">Serviços e produtos</h1>
+    <p class="lead" data-i18n="serv.lead">O disco organiza tudo o que entregamos. Cada fatia é uma frente de trabalho; o aro externo indica qual casa executa. Clique para abrir a lista e, em cada item, ver o que está incluído e em que formato é contratado.</p>
+  </div>
+</section>
+
+<section class="section" id="catalogo">
+  <div class="wrap">
+    <div class="disco-wrap">
+      <div>
+        <div class="disco-stage">
+          <svg id="wheel" viewBox="0 0 400 400" role="group" aria-label="Disco de serviços e produtos"></svg>
+          <div class="disco-hub" id="disco-hub" aria-live="polite">
+            <span class="hub-kicker" data-i18n="disco.hub.kicker">Escolha uma fatia</span>
+            <p class="hub-title" data-i18n="disco.hub.titulo">Serviços &amp; Produtos</p>
+            <p class="hub-body" data-i18n="disco.hub.corpo">Barros · Digital Solutions · Inteligência Sanitária</p>
+          </div>
+        </div>
+        <div class="legenda" id="legenda"></div>
+
+        <div class="doc-control" style="margin-top:var(--sp-4)">
+          <dl><dt data-i18n="doc.catalogo">Catálogo</dt><dd>DOC-WEB-CAT-001</dd></dl>
+          <dl><dt data-i18n="doc.idioma">Idioma mestre</dt><dd>pt-BR</dd></dl>
+        </div>
+      </div>
+
+      <div>
+        <div class="vitrine" id="vitrine" hidden aria-live="polite"></div>
+        <div class="vitrine-empty" id="vitrine-vazia" data-i18n="disco.vazio">Selecione uma fatia do disco para ver os serviços e produtos daquela frente.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="serv.contrat.eyebrow">Contratação</span>
+      <h2 data-i18n="serv.contrat.titulo">Formatos disponíveis</h2>
+    </div>
+    <dl class="facts">
+      <div>
+        <dt data-i18n="serv.f1.t">Projeto fechado</dt>
+        <dd data-i18n="serv.f1.d">Escopo, entregáveis e preço definidos antes do início. Pagamento por marcos de entrega.</dd>
+      </div>
+      <div>
+        <dt data-i18n="serv.f2.t">Assinatura mensal</dt>
+        <dd data-i18n="serv.f2.d">Painéis, plataformas e acompanhamento contínuo. Inclui hospedagem, manutenção e suporte.</dd>
+      </div>
+      <div>
+        <dt data-i18n="serv.f3.t">Contrato por período</dt>
+        <dd data-i18n="serv.f3.d">Interim management e PMO. Mandato, alçada e dedicação definidos em contrato.</dd>
+      </div>
+      <div>
+        <dt data-i18n="serv.f4.t">Licença por empresa</dt>
+        <dd data-i18n="serv.f4.d">Modelos de planilha e acervo de apresentações, com atualização e governança de versões.</dd>
+      </div>
+      <div>
+        <dt data-i18n="serv.f5.t">Turma e in-company</dt>
+        <dd data-i18n="serv.f5.d">Formação com certificado nominal, carga horária declarada e avaliação documentada.</dd>
+      </div>
+      <div>
+        <dt data-i18n="serv.f6.t">Moeda</dt>
+        <dd data-i18n="serv.f6.d">EUR ou NOK para contratos europeus, BRL para contratos brasileiros. Taxa de referência fixada na assinatura.</dd>
+      </div>
+    </dl>
+    <div class="btn-row" style="margin-top:var(--sp-4)">
+      <a class="btn" href="/contato.html" data-i18n="serv.cta">Pedir proposta</a>
+    </div>
+  </div>
+</section>

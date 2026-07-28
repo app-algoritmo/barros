@@ -1,0 +1,17 @@
+/* EQUIPE */
+  Coordenação: Paulo Fernando De Barros
+  Contato: post@barros.no
+  Local: Larvik, Vestfold — Noruega
+
+/* CASAS */
+  Barros Consultoria — operações, estratégia e governança
+  Digital Solutions — tecnologia (org.nr 996 041 468) — dsnorge.com
+  Inteligência Sanitária — assuntos regulatórios e certificação
+
+/* SITE */
+  Idioma mestre: pt-BR
+  Idiomas: pt-BR, en, nb-NO, es
+  Tipografia: IBM Plex Sans / Serif / Mono (SIL OFL 1.1), self-hosted
+  Construção: HTML estático gerado por tools/build.py
+  Hospedagem: GitHub Pages
+  Padrões: WCAG 2.2 AA · estrutura alinhada à ISO 9001:2015
